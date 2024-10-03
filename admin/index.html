@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Content Manager</title>
+  <!-- Ajout du CSS du CMS -->
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.css">
+  <!-- Ajout du script Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
 <body>
+  <!-- Conteneur principal pour Netlify CMS -->
+  <div id="cms"></div>
+
+  <!-- Ajout du script CMS après le conteneur -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
