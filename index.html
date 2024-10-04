@@ -1,0 +1,104 @@
+<!-- Handcrafted with ❤️ by myself -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alexandre Pinot, Product Designer at Dust, specializing in integrating AI into workflows. Discover my projects and thoughts.">
+  <meta name="keywords" content="Alexandre Pinot, Product Designer, Dust, AI, Freelance, UX, UI, design, technology, innovation">
+  <meta name="author" content="Alexandre Pinot">
+  <title>Alexandre Pinot - Product Designer @Dust</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="about">
+  <img class="pp" src="static/img/pp.jpeg" alt="Alexandre Pinot profile picture">
+  <div class="headline">
+    <h1>Alexandre Pinot <span class="shaking-emoji" id="rain">🧙</span></h1>  
+    <div id="rain-container"></div>
+    <h2>
+      Product designer 
+      <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.jpeg">@Dust</a>, based in Paris, France 🇫🇷
+    </h2>
+  </div>
+  <p>
+    I thrive on crafting innovative products that invite users into an intuitive experience. My journey navigates the vibrant intersections of engineering, business, and psychology, forging designs that foster a sense of belonging for everyone, regardless of their background.<br><br>
+    Previously, I worked <a href="https://en.malt.fr/" target="_blank" class="hover-link" data-logo="static/img/malt-logo.png">@Malt</a>, the leading platform connecting businesses with freelancers. I had the opportunity to work on various projects, ranging from B2C to AI-powered solutions for business needs.<br><br>
+    Currently working <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.jpeg">@Dust</a>, integrating AI into workflows and professional collaboration.
+  </p>
+</section>
+<section class="notes">
+  <h2>Notes</h2>
+  <ul>
+    <li>
+  <p><a href="">How to deal with AI when you consider you're a creative person </a>- Sept. 2024</p>
+</li>
+<li>
+ <p><a href="">Being a product designer in France</a> - Oct. 2023</p>
+</li>
+<li>
+  <p> <a href="">Standing out as a junior while business school alumni have become designers</a> - Jan. 2023</p>
+</li>
+</ul>
+</section>
+<img id="logo" class="logo-follow" alt="Follow Logo">
+<footer>
+  <h2><strong>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.png">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.png">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></strong></h2>
+</footer>
+
+<script>
+  const hoverLinks = document.querySelectorAll('.hover-link');
+  const logo = document.getElementById('logo');
+
+  hoverLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      logo.src = link.getAttribute('data-logo');
+      logo.style.display = 'block';
+    });
+
+    link.addEventListener('mousemove', (e) => {
+      logo.style.left = `${e.pageX + 10}px`;
+      logo.style.top = `${e.pageY + 10}px`;
+    });
+
+    link.addEventListener('mouseleave', () => {
+      logo.style.display = 'none';
+    });
+  });
+
+  const emoji = document.getElementById('rain');
+  const tooltip = document.getElementById('tooltip');
+
+  emoji.addEventListener('mouseenter', () => {
+    const emojiRect = emoji.getBoundingClientRect();
+    tooltip.style.left = `${emojiRect.left + window.scrollX}px`;
+    tooltip.style.top = `${emojiRect.top - tooltip.offsetHeight + window.scrollY - 10}px`;
+    tooltip.style.display = 'block';
+  });
+
+  emoji.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+
+  emoji.addEventListener('click', () => {
+    const emojiContainer = document.getElementById('rain-container');
+    const emojiList = ['🧙', '🪄', '✨', '🧙‍♀️', '🕴️'];
+
+    for (let i = 0; i < 30; i++) {
+      const emojiDiv = document.createElement('div');
+      emojiDiv.classList.add('emoji');
+      emojiDiv.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+      emojiDiv.style.left = `${Math.random() * 100}vw`;
+      emojiDiv.style.top = '-50px';
+      emojiDiv.style.animationDelay = `${Math.random() * 2}s`;
+      emojiDiv.style.transform = `translateX(${Math.random() * 20 - 10}px)`;
+
+      emojiContainer.appendChild(emojiDiv);
+      setTimeout(() => emojiDiv.remove(), 4000);
+    }
+  });
+</script>
+
+</body>
+</html>
