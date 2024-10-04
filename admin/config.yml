@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # ou la branche que vous utilisez
+  branch: main # Changez cela en fonction de votre branche principale
 
 media_folder: "assets/images" # Dossier pour les images
 public_folder: "/assets/images" # URL publique pour les images
