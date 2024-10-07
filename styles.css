@@ -19,7 +19,7 @@ body {
     max-width: 600px;
     margin: 64px auto;
     padding: 60px 40px 100px 40px;
-    font-family: "sfpro";
+    font-family: "sfpro","sfpro-display";
     color: #333330;
 }
 
