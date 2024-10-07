@@ -1,8 +1,8 @@
 /* SF Pro Display Semibold */
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('static/font/SFProDisplaySemibold.woff2') format('woff2'),
-         url('static/font/SFProDisplaySemibold.woff') format('woff');
+    src: url('static/font/SFProDisplay-Semibold.woff2') format('woff2'),
+         url('static/font/SFProDisplay-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
@@ -10,8 +10,8 @@
 /* SF Pro Rounded Regular */
 @font-face {
     font-family: 'SF Pro Rounded';
-    src: url('static/font/SFProRoundedRegular.woff2') format('woff2'),
-         url('static/font/SFProRoundedRegular.woff') format('woff');
+    src: url('static/font/SFProRounded-Regular.woff2') format('woff2'),
+         url('static/font/SFProRounded-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
 /* SF Pro Rounded Semibold */
 @font-face {
     font-family: 'SF Pro Rounded';
-    src: url('static/font/SFProRoundedSemibold.woff2') format('woff2'),
-         url('static/font/SFProRoundedSemibold.woff') format('woff');
+    src: url('static/font/SFProRounded-Semibold.woff2') format('woff2'),
+         url('static/font/SFProRounded-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
