@@ -85,6 +85,7 @@ a:hover {
 
 .pp {
     height: 120px;   
+    width: 120px;
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
