@@ -20,7 +20,7 @@
 @font-face {
     font-family: 'SF Pro Rounded';
     src: url('static/font/SFRounded-Semibold.woff2') format('woff2'),
-         url('static/font/SFRounded-Semibold.woff') format('woff');
+         url('static/font/SFProRounded-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
