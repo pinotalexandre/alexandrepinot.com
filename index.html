@@ -24,8 +24,14 @@
 <body>
 
 <section class="about">
-  <img class="pp" src="static/img/pp.webp" alt="Profile picture of Alexandre Pinot, Product Designer at Dust" width="120" height="120">
-  <div class="headline">
+  <img src="static/img/pp.webp" 
+  class="pp"
+  srcset="static/img/pp.webp 120w, static/img/pp-medium.webp 120w, static/img/pp-large.webp 120w" 
+  sizes="120px" 
+  alt="Alexandre Pinot profile picture" 
+  width="120" 
+  height="120" 
+  loading="lazy">  <div class="headline">
     <h1>Alexandre Pinot <span class="shaking-emoji" id="rain">🧙</span></h1>  
     <div id="rain-container"></div>
     <h2>
