@@ -1,22 +1,4 @@
-/* SF Pro Rounded Regular */
-@font-face {
-    font-family: 'SF Pro Rounded';
-    src: url('static/font/SFRounded-Regular.woff2') format('woff2'),
-         url('static/font/SFRounded-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* SF Pro Rounded Semibold */
-@font-face {
-    font-family: 'SF Pro Rounded';
-    src: url('static/font/SFRounded-Semibold.woff2') format('woff2'),
-         url('static/font/SFProRounded-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body {
     max-width: 600px;
     margin: 64px auto;
@@ -41,8 +23,9 @@ li:last-child {
     padding: 0;      
 }
 h1,h2 {
-    font-family: "SF Pro Display";
+    font-family: 'Inter';
     font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
 h1 {
@@ -57,15 +40,16 @@ p {
     font-weight: 300;
     line-height: 24px;
     margin : 0;
-    font-family: 'SF Pro Rounded';
+    font-family: 'Inter';
     font-weight: 400;
+    letter-spacing: -0.5px;
 }
 
 a { 
     text-decoration: none;
     color: #115CFF;
         line-height: 24px;
-    font-family: 'SF Pro Display';
+    font-family: 'Inter';
 }
 
 a:hover { 
