@@ -48,15 +48,15 @@ p {
 
 a { 
     text-decoration: none;
-    color: #0044D6;
-        line-height: 24px;
+    color: #007BFF;
+    line-height: 24px;
     font-family: 'Inter';
     font-size: 16px;
 }
 
 a:hover { 
     text-decoration: underline;
-    color: #0036AB;
+    color: #0056b3;
 
 }
 
