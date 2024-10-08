@@ -18,42 +18,50 @@
   <meta name="twitter:image" content="static/img/pp.webp">
   <meta name="robots" content="index, follow">
   <title>Alexandre Pinot - Product Designer @Dust</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="static/img/favicon.webp" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="static/img/pp.webp">
+  <link rel="preload" as="image" href="static/img/dust-logo.webp">
+  <link rel="preload" as="image" href="static/img/malt-logo.webp">
+</head>
 
 <body>
+  <section class="about">
+    <img src="static/img/pp.webp" 
+      class="pp" 
+      srcset="static/img/pp.webp 120w, static/img/pp-medium.webp 120w, static/img/pp-large.webp 120w" 
+      sizes="120px" 
+      alt="Alexandre Pinot profile picture" 
+      width="120" 
+      height="120" 
+      loading="lazy"> 
+      
+    <div class="headline">
+      <h1>Alexandre Pinot <span class="shaking-emoji" id="rain">🧙</span></h1>
+      <div id="rain-container"></div>
+      <h2>Product designer <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.webp">@Dust</a>, based in Paris, France 🇫🇷</h2>
+    </div>
 
-<section class="about">
-  <img src="static/img/pp.webp" 
-  class="pp"
-  srcset="static/img/pp.webp 120w, static/img/pp-medium.webp 120w, static/img/pp-large.webp 120w" 
-  sizes="120px" 
-  alt="Alexandre Pinot profile picture" 
-  width="120" 
-  height="120" 
-  loading="lazy">  <div class="headline">
-    <h1>Alexandre Pinot <span class="shaking-emoji" id="rain">🧙</span></h1>  
-    <div id="rain-container"></div>
-    <h2>
-      Product designer 
-      <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.webp">@Dust</a>, based in Paris, France 🇫🇷
-    </h2>
-  </div>
-  <p>
-    I thrive on crafting innovative products that invite users into an intuitive experience. My journey navigates the vibrant intersections of engineering, business, and psychology, forging designs that foster a sense of belonging for everyone, regardless of their background.<br><br>
-    Previously, I worked <a href="https://en.malt.fr/" target="_blank" class="hover-link" data-logo="static/img/malt-logo.webp">@Malt</a>, the leading platform connecting businesses with freelancers. I had the opportunity to work on various projects, ranging from B2C to AI-powered solutions for business needs.<br><br>
-    Currently working <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.webp">@Dust</a>, integrating AI into workflows and professional collaboration.
-  </p>
-<img id="logo" class="logo-follow" alt="Dynamic logo">
-<footer>
-  <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
-</footer>
-<script src="script.js" defer></script> 
+    <p>
+      I thrive on crafting innovative products that invite users into an intuitive experience. My journey navigates the vibrant intersections of engineering, business, and psychology, forging designs that foster a sense of belonging for everyone, regardless of their background.
+      <br><br>
+      Previously, I worked <a href="https://en.malt.fr/" target="_blank" class="hover-link" data-logo="static/img/malt-logo.webp">@Malt</a>, the leading platform connecting businesses with freelancers. I had the opportunity to work on various projects, ranging from B2C to AI-powered solutions for business needs.
+      <br><br>
+      Currently working <a href="https://dust.tt" target="_blank" class="hover-link" data-logo="static/img/dust-logo.webp">@Dust</a>, integrating AI into workflows and professional collaboration.
+    </p>
+
+    <img id="logo" class="logo-follow" alt="Dynamic logo">
+  </section>
+
+  <footer>
+    <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
+  </footer>
+
+  <script src="script.js" defer></script> 
 </body>
 </html>
