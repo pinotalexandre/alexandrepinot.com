@@ -1,18 +1,20 @@
 backend:
   name: git-gateway
-  branch: main # ou la branche que tu utilises
+  branch: main
 
-media_folder: "static/img/uploads" # Dossier où les images seront stockées
-public_folder: "/img/uploads" 
+media_folder: "static/img" # Dossier pour les fichiers médias
+public_folder: "/img"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
+  - name: "posts" # Le nom de la collection
+    label: "Posts" # Label affiché dans l'interface
+    folder: "posts" # Dossier où les articles sont stockés
+    create: true # Permet de créer de nouveaux articles
+    slug: "{{slug}}" # Génère un slug basé sur le titre
+    fields: # Champs de chaque article
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image", required: false }
+
+# Optionnel: Générer posts.json à chaque publication
+# Assurez-vous que votre projet a un script pour mettre à jour posts.json
