@@ -51,47 +51,6 @@
     </p>
 
     <img id="logo" class="logo-follow" alt="Dynamic logo">
-    <section class="blog">
-      <h2>Blog</h2>
-      <div id="posts-container"></div>
-    </section>
-  </section>
-
-  <script>
-// Définir la fonction fetchPosts
-async function fetchPosts() {
-    try {
-        const response = await fetch('posts.json'); // Vérifiez que le chemin est correct
-        if (!response.ok) {
-            throw new Error('Erreur lors de la récupération des fichiers: ' + response.statusText);
-        }
-        return await response.json(); // Retourne les données JSON
-    } catch (error) {
-        console.error('Erreur:', error);
-    }
-}
-
-// Appel de la fonction fetchPosts pour récupérer et afficher les articles
-async function displayPosts() {
-    const postsContainer = document.getElementById('posts-container');
-    
-    const posts = await fetchPosts();
-    if (posts && posts.posts) {
-        posts.posts.forEach(post => {
-            const postDiv = document.createElement('div');
-            // Créez un lien vers chaque article HTML
-            postDiv.innerHTML = `<a href="articles/${post.replace('.md', '.html')}">${post.replace('.md', '')}</a>`; // Assurez-vous que le chemin vers l'article est correct
-            postsContainer.appendChild(postDiv);
-        });
-    }
-}
-
-// Appeler la fonction pour afficher les articles
-displayPosts();
-
-
-
-  </script>
   
   <footer>
     <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
