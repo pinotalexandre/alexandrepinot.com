@@ -1,17 +1,19 @@
 backend:
   name: git-gateway
-  branch: main # ou la branche que vous utilisez
-
-media_folder: "assets/images" # Dossier pour les images
-public_folder: "/assets/images" # URL publique pour les images
-
+  branch: main
+media_folder: "static/images"
+public_folder: "images"
 collections:
-  - name: "posts" # Nom de la collection
-    label: "Articles de Blog" # Label pour l'interface
-    folder: "content/blog" # Dossier où les articles seront stockés
-    create: true # Permet de créer de nouveaux articles
-    fields: # Champs de chaque article
+  - name: "posts"
+    label: "Articles"
+    folder: "content/posts"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    create: true
+    fields:
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Date de Publication", name: "date", widget: "datetime" }
+      - { label: "Image à la Une", name: "image", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list", summary: "{{fields.tag}}", field: { label: "Tag", name: "tag", widget: "string" } }
+      - { label: "Corps", name: "body", widget: "markdown" }
