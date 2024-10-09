@@ -1,6 +1,7 @@
 <!-- Handcrafted with ❤️ by Alexandre Pinot -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,15 +34,8 @@
 
 <body>
   <section class="about">
-    <img src="static/img/pp.webp" 
-      class="pp" 
-      srcset="static/img/pp.webp 120w, static/img/pp-medium.webp 120w, static/img/pp-large.webp 120w" 
-      sizes="120px" 
-      alt="Alexandre Pinot profile picture" 
-      width="120" 
-      height="120" 
-      loading="lazy"> 
-      
+    <img src="static/img/pp.webp" class="pp" srcset="static/img/pp.webp 120w, static/img/pp-medium.webp 120w, static/img/pp-large.webp 120w" sizes="120px" alt="Alexandre Pinot profile picture" width="120" height="120" loading="lazy">
+    
     <div class="headline">
       <h1>Alexandre Pinot <span class="shaking-emoji" id="rain">🧙</span></h1>
       <div id="rain-container"></div>
@@ -57,39 +51,53 @@
     </p>
 
     <img id="logo" class="logo-follow" alt="Dynamic logo">
+    <section class="blog">
+      <h2>Blog</h2>
+      <div id="posts-container"></div>
+    </section>
   </section>
-  <section class="blog">
-    <h2>Blog</h2>
-    <ul id="blog-posts"></ul>
-  </section>
-  
+
   <script>
-const blogPostsContainer = document.getElementById('blog-posts');
+// Définir la fonction fetchPosts
+async function fetchPosts() {
+    try {
+        const response = await fetch('posts.json'); // Vérifiez que le chemin est correct
+        if (!response.ok) {
+            throw new Error('Erreur lors de la récupération des fichiers: ' + response.statusText);
+        }
+        return await response.json(); // Retourne les données JSON
+    } catch (error) {
+        console.error('Erreur:', error);
+    }
+}
 
-fetch('/posts/')
-  .then(response => response.text())
-  .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const links = Array.from(doc.querySelectorAll('a'));
-    const posts = links.filter(link => link.href.endsWith('.md'));
-
-    posts.forEach(post => {
-      fetch(post.href)
-        .then(response => response.text())
-        .then(markdown => {
-          const article = document.createElement('article');
-          article.innerHTML = marked(markdown);
-          blogPostsContainer.appendChild(article);
+// Appel de la fonction fetchPosts pour récupérer et afficher les articles
+async function displayPosts() {
+    const postsContainer = document.getElementById('posts-container');
+    
+    const posts = await fetchPosts();
+    if (posts && posts.posts) {
+        posts.posts.forEach(post => {
+            const postDiv = document.createElement('div');
+            // Créez un lien vers chaque article HTML
+            postDiv.innerHTML = `<a href="articles/${post.replace('.md', '.html')}">${post.replace('.md', '')}</a>`; // Assurez-vous que le chemin vers l'article est correct
+            postsContainer.appendChild(postDiv);
         });
-    });
-  });
+    }
+}
+
+// Appeler la fonction pour afficher les articles
+displayPosts();
+
+
 
   </script>
+  
   <footer>
     <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
   </footer>
 
   <script src="script.js" defer></script> 
 </body>
+
 </html>

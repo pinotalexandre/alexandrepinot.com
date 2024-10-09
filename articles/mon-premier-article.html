@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Premier Article</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Assurez-vous que le chemin vers votre CSS est correct -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script> <!-- Chargement de marked.js -->
+</head>
+<body>
+    <div id="article-content"></div> <!-- Conteneur pour le contenu de l'article -->
+    
+    <script>
+        // Fonction pour charger et afficher le contenu Markdown
+        async function loadMarkdown() {
+            try {
+                const response = await fetch('../posts/mon-premier-article.md'); // Chemin vers le fichier .md
+                if (!response.ok) {
+                    throw new Error('Erreur lors du chargement du fichier Markdown');
+                }
+                const markdownText = await response.text(); // Récupère le texte brut
+                const htmlContent = marked(markdownText); // Convertit en HTML
+                document.getElementById('article-content').innerHTML = htmlContent; // Affiche le contenu converti
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        // Appeler la fonction pour charger le Markdown
+        loadMarkdown();
+    </script>
+</body>
+</html>
