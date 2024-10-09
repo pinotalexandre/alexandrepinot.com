@@ -12,4 +12,4 @@ collections:
     publish: true
     editor:
       preview: true
-      onPostPublish: "../netlify/functions/updatePosts" # Appel de la fonction lambda
+      onPostPublish: "../netlify/functions/updatePosts.js" # Appel de la fonction lambda
