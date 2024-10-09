@@ -28,6 +28,7 @@
   <link rel="preload" as="image" href="static/img/pp.webp">
   <link rel="preload" as="image" href="static/img/dust-logo.webp">
   <link rel="preload" as="image" href="static/img/malt-logo.webp">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -57,7 +58,34 @@
 
     <img id="logo" class="logo-follow" alt="Dynamic logo">
   </section>
+  <section class="blog">
+    <h2>Blog</h2>
+    <ul id="blog-posts"></ul>
+  </section>
+  
+  <script>
+const blogPostsContainer = document.getElementById('blog-posts');
 
+fetch('/posts/')
+  .then(response => response.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const links = Array.from(doc.querySelectorAll('a'));
+    const posts = links.filter(link => link.href.endsWith('.md'));
+
+    posts.forEach(post => {
+      fetch(post.href)
+        .then(response => response.text())
+        .then(markdown => {
+          const article = document.createElement('article');
+          article.innerHTML = marked(markdown);
+          blogPostsContainer.appendChild(article);
+        });
+    });
+  });
+
+  </script>
   <footer>
     <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
   </footer>
