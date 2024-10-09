@@ -1,20 +1,15 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "static/img" # Dossier pour les fichiers médias
-public_folder: "/img"
-
 collections:
-  - name: "posts" # Le nom de la collection
-    label: "Posts" # Label affiché dans l'interface
-    folder: "posts" # Dossier où les articles sont stockés
-    create: true # Permet de créer de nouveaux articles
-    slug: "{{slug}}" # Génère un slug basé sur le titre
-    fields: # Champs de chaque article
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Date", name: "date", widget: "datetime" }
-
-# Optionnel: Générer posts.json à chaque publication
-# Assurez-vous que votre projet a un script pour mettre à jour posts.json
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" } # Assurez-vous que le slug est ajouté ici
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+    publish: true
+    editor:
+      preview: true
+      onPostPublish: "../netlify/functions/updatePosts" # Appel de la fonction lambda
