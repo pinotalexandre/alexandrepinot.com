@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://alexandrepinot.co/</loc>
+    <loc>/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
-    <loc>https://alexandrepinot.co/posts/mon-deuxieme-article/</loc>
+    <loc>/posts/mon-deuxieme-article/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
-    <loc>https://alexandrepinot.co/posts/mon-premier-article/</loc>
+    <loc>/posts/mon-premier-article/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
-    <loc>https://alexandrepinot.co/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
-    <loc>https://alexandrepinot.co/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://alexandrepinot.co/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>
