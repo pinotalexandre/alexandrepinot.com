@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # ou la branche de ton dépôt
+
+media_folder: "static/images/uploads" # Où les fichiers médias seront stockés dans ton dépôt
+public_folder: "/images/uploads" # Où les fichiers médias seront disponibles sur ton site
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "blog/content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
