@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Mon Blog</title>
-    <link>/posts/</link>
+    <link>https://alexandrepinot.co/blog/public/posts/</link>
     <description>Recent content in Posts on Mon Blog</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
     <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alexandrepinot.co/blog/public/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How AI will...</title>
-      <link>/posts/mon-troisi%C3%A8me/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/mon-troisi%C3%A8me/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>/posts/mon-troisi%C3%A8me/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/mon-troisi%C3%A8me/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; daaaaaaamn.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>/posts/mon-deuxieme-article/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/mon-deuxieme-article/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>/posts/mon-deuxieme-article/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/mon-deuxieme-article/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>My very First Post</title>
-      <link>/posts/mon-premier-article/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/mon-premier-article/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>/posts/mon-premier-article/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/mon-premier-article/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; daaaaaaamn.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>hey</title>
-      <link>/posts/hey/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/hey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/posts/hey/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/hey/</guid>
       <description>&lt;p&gt;v﻿v&lt;/p&gt;</description>
     </item>
     <item>
       <title>test</title>
-      <link>/posts/test-1/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/test-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/posts/test-1/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/test-1/</guid>
       <description>&lt;p&gt;t﻿est&lt;/p&gt;</description>
     </item>
     <item>
       <title>test</title>
-      <link>/posts/test/</link>
+      <link>https://alexandrepinot.co/blog/public/posts/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/posts/test/</guid>
+      <guid>https://alexandrepinot.co/blog/public/posts/test/</guid>
       <description>&lt;p&gt;t﻿est&lt;/p&gt;</description>
     </item>
   </channel>
