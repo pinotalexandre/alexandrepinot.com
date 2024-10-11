@@ -8,7 +8,7 @@ public_folder: "/images/uploads" # Où les fichiers médias seront disponibles s
 collections:
   - name: "articles"
     label: "Articles"
-    folder: "../../blog/content/posts"
+    folder: "blog/content/posts"
     create: true
     slug: "{{slug}}"
     fields:
