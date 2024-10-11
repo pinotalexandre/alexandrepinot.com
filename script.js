@@ -48,3 +48,23 @@ emoji.addEventListener('click', () => {
         setTimeout(() => emojiDiv.remove(), 4000);
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const articlesContainer = document.getElementById("recent-articles");
+    
+    // Remplacez cette partie par l'emplacement de votre dossier d'articles
+    const articles = [
+        { title: "Titre de l'article 1", url: "blog/public/posts/mon-deuxieme-article" },
+        { title: "Titre de l'article 2", url: "blog/public/posts/mon-deuxieme-article" },
+        { title: "Titre de l'article 3", url: "blog/public/posts/mon-deuxieme-article" }
+        // Ajoutez d'autres articles ici
+    ];
+
+    articles.forEach(article => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = article.url;
+        a.textContent = article.title;
+        li.appendChild(a);
+        articlesContainer.appendChild(li);
+    });
+});
