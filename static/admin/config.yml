@@ -1,17 +1,16 @@
 backend:
   name: git-gateway
-  branch: main # Remplace "main" par le nom de ta branche principale si nécessaire
+  branch: main # ou la branche de ton dépôt
 
-media_folder: "../img"
-public_folder: "../img"
+media_folder: "static/images/uploads" # Où les fichiers médias seront stockés dans ton dépôt
+public_folder: "/images/uploads" # Où les fichiers médias seront disponibles sur ton site
 
 collections:
-  - name: "posts"
+  - name: "articles"
     label: "Articles"
     folder: "../../blog/content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
