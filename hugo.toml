@@ -1,5 +1,0 @@
-baseURL = ""
-languageCode = "fr-FR"
-title = "Mon Blog"
-[outputs]
-home = ["HTML", "RSS", "JSON"]
