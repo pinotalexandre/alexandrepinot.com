@@ -5,8 +5,8 @@ const markdownIt = require('markdown-it');
 const md = new markdownIt();
 
 async function build() {
-  const articlesDir = path.join(__dirname, 'articles'); // Chemin mis à jour
-  const outputDir = path.join(__dirname, 'articles'); // Dossier de sortie pour les fichiers HTML
+  const articlesDir = path.join(__dirname, 'articles'); // Chemin vers votre dossier articles
+  const outputDir = path.join(__dirname, 'articles_html'); // Dossier de sortie pour les HTML
 
   // Créer le dossier de sortie s'il n'existe pas
   await fs.ensureDir(outputDir);
@@ -22,7 +22,7 @@ async function build() {
       const content = await fs.readFile(filePath, 'utf-8');
 
       // Séparer le front matter du contenu
-      const match = content.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/);
+      const match = content.match(/---\s*\n([\s\S]+?)\n---\s*\n([\s\S]*)/);
       if (match) {
         const frontMatter = match[1];
         const body = match[2];
@@ -68,6 +68,8 @@ async function build() {
           date: metadata.date,
           url: `/articles_html/${outputFileName}`
         });
+      } else {
+        console.error(`Le fichier ${filePath} n'a pas un front matter correctement formaté.`);
       }
     }
   }

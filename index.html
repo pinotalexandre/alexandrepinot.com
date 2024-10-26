@@ -63,21 +63,21 @@
 
   <script src="script.js" defer></script> 
   <script>
-    fetch('/articles/articles.json')
-      .then(response => response.json())
-      .then(data => {
-        const articlesList = document.getElementById('articles-list');
-        data.sort((a, b) => new Date(b.date) - new Date(a.date));
-        data.forEach(article => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = article.url;
-          a.textContent = article.title;
-          li.appendChild(a);
-          articlesList.appendChild(li);
-        });
-      })
-      .catch(error => console.error('Erreur lors du chargement des articles :', error));
+  fetch('/articles_html/articles.json')
+    .then(response => response.json())
+    .then(data => {
+      const articlesList = document.getElementById('articles-list');
+      data.sort((a, b) => new Date(b.date) - new Date(a.date));
+      data.forEach(article => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = article.url;
+        a.textContent = article.title;
+        li.appendChild(a);
+        articlesList.appendChild(li);
+      });
+    })
+    .catch(error => console.error('Erreur lors du chargement des articles :', error));
   </script>
   
 </body>
