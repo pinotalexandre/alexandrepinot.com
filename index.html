@@ -63,7 +63,7 @@
 
   <script src="script.js" defer></script> 
   <script>
-    fetch('articles/articles.json')
+    fetch('/articles/articles.json')
       .then(response => response.json())
       .then(data => {
         const articlesList = document.getElementById('articles-list');

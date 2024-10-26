@@ -5,8 +5,8 @@ const markdownIt = require('markdown-it');
 const md = new markdownIt();
 
 async function build() {
-  const articlesDir = path.join(__dirname, 'articles');
-  const outputDir = path.join(__dirname, 'articles');
+  const articlesDir = path.join(__dirname, 'articles'); // Chemin mis à jour
+  const outputDir = path.join(__dirname, 'articles'); // Dossier de sortie pour les fichiers HTML
 
   // Créer le dossier de sortie s'il n'existe pas
   await fs.ensureDir(outputDir);
@@ -45,7 +45,7 @@ async function build() {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>${metadata.title}</title>
-          <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
           <article>
@@ -66,7 +66,7 @@ async function build() {
         articlesList.push({
           title: metadata.title,
           date: metadata.date,
-          url: `articles/${outputFileName}`
+          url: `/articles_html/${outputFileName}`
         });
       }
     }
