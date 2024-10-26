@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: "Blog - Alexandre Pinot"
+pagination:
+  data: collections.posts
+  size: all
+permalink: "/blog/index.html"
+---
+
+<h1>Notes & réflexions</h1>
+<ul>
+  {% for post in pagination.items %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a> - <em>{{ post.date | date("d MMM yyyy") }}</em>
+    </li>
+  {% endfor %}
+</ul>

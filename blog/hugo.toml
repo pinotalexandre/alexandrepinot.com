@@ -1,5 +1,0 @@
-baseURL = "https://alexandrepinot.co/blog/public"
-languageCode = "fr-FR"
-title = "Mon Blog"
-[outputs]
-home = ["HTML", "RSS", "JSON"]
