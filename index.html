@@ -51,11 +51,35 @@
 
     <img id="logo" class="logo-follow" alt="Dynamic logo">
   </section>
+  <section id="articles">
+    <h2>Notes & thoughts</h2>
+    <ul id="articles-list">
+      <!-- Les liens vers les articles seront ajoutés ici -->
+    </ul>
+  </section>
   <footer>
     <h2>Check my work on <a href="https://dribbble.com/alexandrepinot" target="_blank" class="hover-link" data-logo="static/img/dribbble-logo.webp">Dribbble</a>, let's connect on <a href="https://linkedin.com/in/pinotalexandre" target="_blank" class="hover-link" data-logo="static/img/linkedin-logo.webp">LinkedIn</a> or <a href="mailto:hialexpinot@gmail.com">mail me</a></h2>
   </footer>
 
   <script src="script.js" defer></script> 
+  <script>
+    fetch('articles/articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const articlesList = document.getElementById('articles-list');
+        data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        data.forEach(article => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = article.url;
+          a.textContent = article.title;
+          li.appendChild(a);
+          articlesList.appendChild(li);
+        });
+      })
+      .catch(error => console.error('Erreur lors du chargement des articles :', error));
+  </script>
+  
 </body>
 
 </html>
