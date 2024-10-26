@@ -73,7 +73,7 @@ async function build() {
           <article>
           <a href="../index.html">← Back</a>
             <h1 class="blog_title">${metadata.title}</h1>
-            <p class="blog_text"><em>${new Date(metadata.date).toLocaleDateString('fr-FR')}</em></p>
+            <p class="blog_text"><p><em>Publié le ${formatDate(metadata.date)}</em></p>
             ${htmlContent}
           </article>
         </body>
