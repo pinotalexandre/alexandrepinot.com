@@ -8,7 +8,7 @@ public_folder: "/static/img/uploads"
 collections:
   - name: "articles"
     label: "Articles"
-    folder: "articles"
+    folder: "../articles"
     create: true
     slug: "{{slug}}"
     fields:
