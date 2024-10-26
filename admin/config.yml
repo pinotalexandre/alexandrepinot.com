@@ -1,10 +1,3 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "static/img/uploads"
-public_folder: "/static/img/uploads"
-
 collections:
   - name: "articles"
     label: "Articles"
@@ -13,5 +6,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: "title", label: "Titre", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
+      - name: "date"
+        label: "Date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"       # Format d'enregistrement dans le fichier
+        date_format: "YYYY-MM-DD"  # Format affiché dans le CMS
+        time_format: false         # Désactive l'heure
       - { name: "body", label: "Contenu", widget: "markdown" }
