@@ -6,7 +6,7 @@ const md = new markdownIt();
 
 async function build() {
   const articlesDir = path.join(__dirname, 'articles'); // Chemin vers votre dossier articles
-  const outputDir = path.join(__dirname, 'articles_html'); // Dossier de sortie pour les HTML
+  const outputDir = path.join(__dirname, 'notes'); // Dossier de sortie pour les HTML
 
   // Créer le dossier de sortie s'il n'existe pas
   await fs.ensureDir(outputDir);
@@ -89,7 +89,7 @@ async function build() {
         articlesList.push({
           title: metadata.title,
           date: metadata.date,
-          url: `/articles_html/${outputFileName}`
+          url: `/notes/${outputFileName}`
         });
       } else {
         console.error(`Le fichier ${filePath} n'a pas un front matter correctement formaté.`);
