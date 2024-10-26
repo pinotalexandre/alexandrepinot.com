@@ -1,12 +1,7 @@
 [
   {
-    "title": "Hey",
+    "title": "Hello world =)",
     "date": "2024-10-26T16",
-    "url": "/articles_html/hey.html"
-  },
-  {
-    "title": "New one",
-    "date": "2024-10-26T16",
-    "url": "/articles_html/new-one.html"
+    "url": "/articles_html/hello-world.html"
   }
 ]

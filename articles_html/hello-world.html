@@ -1,44 +1,4 @@
-const fs = require('fs-extra');
-const path = require('path');
-const markdownIt = require('markdown-it');
 
-const md = new markdownIt();
-
-async function build() {
-  const articlesDir = path.join(__dirname, 'articles'); // Chemin vers votre dossier articles
-  const outputDir = path.join(__dirname, 'articles_html'); // Dossier de sortie pour les HTML
-
-  // Créer le dossier de sortie s'il n'existe pas
-  await fs.ensureDir(outputDir);
-
-  // Récupérer tous les fichiers Markdown
-  const files = await fs.readdir(articlesDir);
-
-  const articlesList = [];
-
-  for (const file of files) {
-    if (path.extname(file) === '.md') {
-      const filePath = path.join(articlesDir, file);
-      const content = await fs.readFile(filePath, 'utf-8');
-
-      // Séparer le front matter du contenu
-      const match = content.match(/---\s*\n([\s\S]+?)\n---\s*\n([\s\S]*)/);
-      if (match) {
-        const frontMatter = match[1];
-        const body = match[2];
-
-        // Extraire les données du front matter
-        const metadata = {};
-        frontMatter.split('\n').forEach(line => {
-          const [key, value] = line.split(':').map(s => s.trim());
-          metadata[key] = value;
-        });
-
-        // Convertir le contenu Markdown en HTML
-        const htmlContent = md.render(body);
-
-        // Créer la page HTML
-        const htmlPage = `
         <!DOCTYPE html>
         <html lang="fr">
         <head>
@@ -72,39 +32,11 @@ async function build() {
         <body>
           <article>
           <a href="../index.html">← Back</a>
-            <h1 class="blog_title">${metadata.title}</h1>
-            <p class="blog_text"><em>${new Date(metadata.date).toLocaleDateString('fr-FR')}</em></p>
-            ${htmlContent}
+            <h1 class="blog_title">Hello world =)</h1>
+            <p class="blog_text"><em>Invalid Date</em></p>
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+
           </article>
         </body>
         </html>
-        `;
-
-        // Enregistrer la page HTML
-        const outputFileName = `${path.basename(file, '.md')}.html`;
-        const outputPath = path.join(outputDir, outputFileName);
-        await fs.writeFile(outputPath, htmlPage, 'utf-8');
-
-        // Ajouter l'article à la liste
-        articlesList.push({
-          title: metadata.title,
-          date: metadata.date,
-          url: `/articles_html/${outputFileName}`
-        });
-      } else {
-        console.error(`Le fichier ${filePath} n'a pas un front matter correctement formaté.`);
-      }
-    }
-  }
-
-  // Générer le fichier JSON pour la liste des articles
-  await fs.writeFile(
-    path.join(outputDir, 'articles.json'),
-    JSON.stringify(articlesList, null, 2),
-    'utf-8'
-  );
-
-  console.log('Build terminé avec succès.');
-}
-
-build().catch(err => console.error(err));
+        
