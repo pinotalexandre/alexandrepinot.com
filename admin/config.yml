@@ -13,11 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: "title", label: "Titre", widget: "string" }
-      - name: "date"
-        label: "Date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"       # Format d'enregistrement dans le fichier
-        date_format: "YYYY-MM-DD"  # Format affiché dans le CMS
+      - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Contenu", widget: "markdown" }
 
 
