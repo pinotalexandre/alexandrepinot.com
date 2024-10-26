@@ -42,10 +42,32 @@ async function build() {
         <!DOCTYPE html>
         <html lang="fr">
         <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>${metadata.title}</title>
-          <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alexandre Pinot is a Product Designer at Dust, specializing in AI integration into workflows. Explore his projects and insights on design, innovation, and technology.">
+  <meta name="keywords" content="Alexandre Pinot, Product Designer, AI integration, Dust, UX/UI design, innovation, product design, tech, San Francisco, Paris">
+  <meta name="author" content="Alexandre Pinot">
+  <meta property="og:title" content="Alexandre Pinot - Product Designer @Dust">
+  <meta property="og:description" content="Alexandre Pinot is a Product Designer at Dust, integrating AI into workflows. Discover his portfolio, projects, and insights on design and technology.">
+  <meta property="og:image" content="static/img/pp.webp">
+  <meta property="og:url" content="https://alexandrepinot.co">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alexandre Pinot - Product Designer @Dust">
+  <meta name="twitter:description" content="Explore Alexandre Pinot's portfolio, a Product Designer at Dust focusing on AI-enhanced workflows.">
+  <meta name="twitter:image" content="static/img/pp.webp">
+  <meta name="robots" content="index, follow">
+  <title>Alexandre Pinot - Product Designer @Dust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"></noscript>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preload" as="image" href="static/img/pp.webp">
+  <link rel="preload" as="image" href="static/img/dust-logo.webp">
+  <link rel="preload" as="image" href="static/img/malt-logo.webp">
         </head>
         <body>
           <article>
