@@ -48,22 +48,3 @@ emoji.addEventListener('click', () => {
         setTimeout(() => emojiDiv.remove(), 4000);
     }
 });
-document.addEventListener("DOMContentLoaded", function() {
-    const articlesContainer = document.getElementById("recent-articles");
-    
-    // Remplacez cette partie par l'emplacement de votre dossier d'articles
-    const articles = [
-        { title: "How to stand out as a junior designer (Oct. 2024)", url: "blog/public/posts/mon-premier-article" },
-        { title: "How AI will change the job of Product Designer in the near future (Sept. 2024)", url: "blog/public/posts/mon-premier-article" }
-        // Ajoutez d'autres articles ici
-    ];
-
-    articles.forEach(article => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = article.url;
-        a.textContent = article.title;
-        li.appendChild(a);
-        articlesContainer.appendChild(li);
-    });
-});
