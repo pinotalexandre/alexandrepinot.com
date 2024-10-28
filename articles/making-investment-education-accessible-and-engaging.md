@@ -1,5 +1,5 @@
 ---
-title: Why the Octalysis Framework is a revolutionary tool for engaging apps
+title: "Octalysis framework: A gamification tool focused on motivation"
 date: 2024-10-28T19:45:51.697Z
 ---
 Creating an app that users truly connect with goes far beyond just clean design or robust functionality—it’s about engaging users on a deeper level. At Finzy, where we aim to demystify finance and make investment education accessible, we found a valuable ally in the **Octalysis Framework**. This gamification model provided more than a simple checklist of features; it offered a roadmap to tap into human motivation and transform how users experience learning about finance. Here’s why Octalysis matters and how it shaped Finzy’s journey toward meaningful engagement.
