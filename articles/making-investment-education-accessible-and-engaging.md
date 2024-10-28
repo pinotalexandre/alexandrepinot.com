@@ -2,8 +2,6 @@
 title: Making Investment Education Accessible and Engaging
 date: 2024-10-28T19:45:51.697Z
 ---
-## **Designing Finzy:**
-
 ### **Introduction**
 
 My experience at Finzy as a Product Designer has been a journey into transforming complex financial concepts into an approachable, user-friendly experience. Finzy’s mission is to make investing as easy and intuitive as learning a new language—something akin to “Duolingo for investing.” Throughout my time working with the team, I focused on creating an experience that educates, motivates, and empowers users to take control of their financial future.
