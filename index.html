@@ -72,8 +72,6 @@
           const a = document.createElement('a');
           a.href = article.url;
           a.textContent = article.title;
-  
-          // Créer un élément pour la date
           const dateObj = new Date(article.date);
           let formattedDate = '';
           if (!isNaN(dateObj)) {
@@ -83,13 +81,9 @@
           } else {
             formattedDate = 'Date inconnue';
           }
-  
-          // Créer un élément <span> pour la date
           const dateSpan = document.createElement('span');
           dateSpan.textContent = ` - ${formattedDate}`;
-          dateSpan.classList.add('article-date'); // Classe pour le style
-  
-          // Assembler les éléments
+          dateSpan.classList.add('article-date'); 
           li.appendChild(a);
           li.appendChild(dateSpan);
           articlesList.appendChild(li);
