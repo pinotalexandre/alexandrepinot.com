@@ -18,6 +18,10 @@ Investment education is inherently challenging; the concepts are often complex, 
 
 **Personalized Learning Paths**: Tailor the user experience to each individual’s goals, helping them feel guided and supported.
 
+
+
+![Finzy Screenshot](/static/img/uploads/iphone-14-15-pro-52.jpg)
+
 - - -
 
 ### **The Design Process**
