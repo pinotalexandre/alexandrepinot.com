@@ -2,7 +2,7 @@
 title: Making Investment Education Accessible and Engaging
 date: 2024-10-28T19:45:51.697Z
 ---
-## **Designing Finzy:** 
+## **Designing Finzy:**
 
 ### **Introduction**
 
@@ -127,5 +127,3 @@ Finzy’s product design journey is ongoing, with many more exciting possibiliti
 My experience designing Finzy has been incredibly rewarding, as I was able to tackle real-world challenges in financial education and make a positive impact. By combining a user-centered design approach with gamification and personalization, we transformed complex investment concepts into an accessible, engaging learning experience. Finzy is a testament to how thoughtful design can drive change, making investing less intimidating and more inclusive for everyone.
 
 - - -
-
-This case study not only showcases your role in the design and development process but also highlights the impact of your work in creating a more accessible investment education platform. Let me know if you’d like further customization!
