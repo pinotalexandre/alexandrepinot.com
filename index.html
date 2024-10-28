@@ -62,22 +62,43 @@
 
   <script src="script.js" defer></script> 
   <script>
-  fetch('/notes/articles.json')
-    .then(response => response.json())
-    .then(data => {
-      const articlesList = document.getElementById('articles-list');
-      data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      data.forEach(article => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = article.url;
-        a.textContent = article.title;
-        li.appendChild(a);
-        articlesList.appendChild(li);
-      });
-    })
-    .catch(error => console.error('Erreur lors du chargement des articles :', error));
+    fetch('/notes/articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const articlesList = document.getElementById('articles-list');
+        data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        data.forEach(article => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = article.url;
+          a.textContent = article.title;
+  
+          // Créer un élément pour la date
+          const dateObj = new Date(article.date);
+          let formattedDate = '';
+          if (!isNaN(dateObj)) {
+            const options = { year: 'numeric', month: 'short' };
+            formattedDate = dateObj.toLocaleDateString('en-US', options);
+            formattedDate = formattedDate.replace(' ', '. ');
+          } else {
+            formattedDate = 'Date inconnue';
+          }
+  
+          // Créer un élément <span> pour la date
+          const dateSpan = document.createElement('span');
+          dateSpan.textContent = ` - ${formattedDate}`;
+          dateSpan.classList.add('article-date'); // Classe pour le style
+  
+          // Assembler les éléments
+          li.appendChild(a);
+          li.appendChild(dateSpan);
+          articlesList.appendChild(li);
+        });
+      })
+      .catch(error => console.error('Erreur lors du chargement des articles :', error));
   </script>
+  
+  
   
 </body>
 
