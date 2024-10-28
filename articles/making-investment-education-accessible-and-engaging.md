@@ -6,7 +6,7 @@ Creating an app that users truly connect with goes far beyond just clean design 
 
 - - -
 
-## **The core philosophy: motivation-driven design**
+## **The core philosophy: Motivation-driven design**
 
 At its heart, the **Octalysis framework** is rooted in a powerful idea: **engagement is about motivation, not manipulation**. Many apps try to drive engagement through superficial rewards, like badges or streaks. Octalysis, however, focuses on what makes people tick on a fundamental level. It taps into eight intrinsic motivators—each one a “core drive” that affects human behavior. For us at Finzy, applying these drives meant we could appeal to users’ natural curiosity, sense of progress, and need for purpose, rather than relying on extrinsic motivators alone.
 
@@ -14,7 +14,7 @@ By adopting this philosophy, our goal wasn’t just to make Finzy *fun*; it was 
 
 - - -
 
-## **From theory to action: bringing motivation to Finzy’s design**
+## **From theory to action: Bringing motivation to Finzy’s design**
 
 ### **A purpose-driven learning experience**
 
