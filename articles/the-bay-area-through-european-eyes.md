@@ -1,8 +1,6 @@
 ---
 title: The Bay Area through European eyes
 ---
-# Two weeks in the Bay Area: A European's love-hate letter
-
 I spent two weeks in the Bay Area. Just enough time to get past the tourist photos, but not long enough to get used to the crazy contrasts. Coming from Europe, it felt like stepping into a Black Mirror episode about cities - fascinating, disturbing, but somehow addictive.
 
 ## First impressions
