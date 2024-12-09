@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://alexandrepinot.co/sitemap.xml
+Sitemap: https://alexandre.ee/sitemap.xml
