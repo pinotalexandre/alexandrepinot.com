@@ -49,6 +49,14 @@ a:hover {
 #articles-list {
     list-style: none;
     padding: 0;
+    margin-top: 8px;
+    margin-bottom: 24px; 
+}
+#stuff-list {
+    list-style: none;
+    padding: 0; 
+    margin-top: 8px;
+    margin-bottom: 24px; 
 }
 
 li {
